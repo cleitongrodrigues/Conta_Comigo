@@ -1,0 +1,6 @@
+@ContaComigo.Api_HostAddress = http://localhost:5223
+
+GET {{ContaComigo.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

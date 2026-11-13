@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: contacomigo-sqlserver
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SuaSenhaForte@2026!
+      - MSSQL_PID=Express # Versão gratuita oficial para produção (ou Developer para dev)
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - contacomigo-network
+
+volumes:
+  sqlserver_data:
+    name: contacomigo_sqlserver_data
+
+networks:
+  contacomigo-network:
+    name: contacomigo_network
+
