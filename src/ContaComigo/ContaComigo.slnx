@@ -1,1 +1,5 @@
-<Solution />
+<Solution>
+  <Project Path="ContaComigo.Api/ContaComigo.Api.csproj" />
+  <Project Path="ContaComigo.Application/ContaComigo.Application.csproj" />
+  <Project Path="ContaComigo.Infraestrutura/ContaComigo.Infraestrutura.csproj" />
+</Solution>
